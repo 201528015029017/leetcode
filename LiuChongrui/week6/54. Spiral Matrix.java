@@ -14,13 +14,13 @@ public class Solution {
         int right = m-1, bottom = n-1, left = 0, top = 0;
         while (top <= bottom && left <= right){
             i = top; j = left;
-            while (j <= right) {ans.add(matrix[i][j]); j++;}
+            while (j <= right) {ans.add(matrix[i][j]); j++; step++;}
             j = right; i = top + 1;
-            while (i <= bottom) {ans.add(matrix[i][j]); i++;}
+            while (i <= bottom) {ans.add(matrix[i][j]); i++; step++;}
             i = bottom; j = right-1;
-            while (i > top && j >= left) {ans.add(matrix[i][j]); j--;}
+            while (i > top && j >= left) {ans.add(matrix[i][j]); j--; step++;}
             j = left; i = bottom-1;
-            while (j <= right-1 && i > top){ans.add(matrix[i][j]); i--;}
+            while (j <= right-1 && i > top){ans.add(matrix[i][j]); i--; step++;}
             top++; left++; bottom--; right--;
         }
         return ans;
