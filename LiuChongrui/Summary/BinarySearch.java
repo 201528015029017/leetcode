@@ -5,7 +5,7 @@ public class BinarySearch {
     //找到第一个大于等于key的位置
     //PS： 这里我们看到当a[mid] >= key 时right = mid - 1； 当a[mid] < key 时，left = mid + 1；
     //     这样的话是不是有可能正确值别排除在【left,right】之外了呢？
-    //     确实会这样，但是我们看到，加入正确值被排除在外了，那它只可能在right+1的位置
+    //     确实会这样，但是我们看到，假如正确值被排除在外了，那它只可能在right+1的位置
     //     又因为二分结束时left == right + 1的，所以，当最后一次比较mid时(left == right)，
     //       若a[mid] < key left = mid + 1就是被排除的正确位置
     //       若a[mid] >= key right = mid - 1 此时left==mid没变，left还是满足条件位置
